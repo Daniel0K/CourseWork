@@ -1,0 +1,19 @@
+﻿<Window
+    x:Class="Warehouse.View.AdministratorWindow"    
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:Warehouse.View.Controls"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
+    Title="AdministratorWindow" Height="547.0" Width="1036" 
+    ResizeMode="NoResize">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="510" Margin="0,0,0,0" VerticalAlignment="Top" Width="1022">
+            <TabItem Header="Товары">
+                <controls:MerchendiseControl></controls:MerchendiseControl>
+            </TabItem>
+            <TabItem Header="Заказы">
+                <controls:OrderControl></controls:OrderControl>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

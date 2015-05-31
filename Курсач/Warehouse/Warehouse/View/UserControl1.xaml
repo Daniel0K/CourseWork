@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Warehouse.View.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             mc:Ignorable="d" 
+             d:DesignHeight="474.265" Width="1013.603"
+             DataContext="{StaticResource MainWindowViewModel}">
+    <Grid Background="#FF3F8ACD">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="129*"/>
+            <ColumnDefinition Width="883*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="219*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <dxg:GridControl ItemsSource="{Binding Orders}" EnableSmartColumnsGeneration="True" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="428" Width="1012">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn Header="№ партии" Binding="{Binding consigment}"/>
+                <dxg:GridColumn Header="ID поставщика" Binding="{Binding id_condactor}"/>
+                <dxg:GridColumn Header="Сумма" Binding="{Binding summ}"/>
+                <dxg:GridColumn Header="Дата заказа" Binding="{Binding data_order}"/>
+                <dxg:GridColumn Header="Дата привоза" Binding="{Binding data_import}"/>
+                <dxg:GridColumn Header="Ответственный" Binding="{Binding id_user}"/>
+            </dxg:GridControl.Columns>
+        </dxg:GridControl>
+        <Button Content="Создать заказ" Margin="10,0,10,10" Grid.Row="1"/>
+    </Grid>
+</UserControl>
