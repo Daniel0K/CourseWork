@@ -47,7 +47,7 @@ namespace Warehouse.ViewModel
             }
             else
             {
-                MessageBox.Show("Хуй тебе!!");
+                MessageBox.Show("Доступ запрещен!");
                 //Application.Current.MainWindow.Close();    
             }
         }
